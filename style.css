@@ -1,0 +1,123 @@
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+    overflow: hidden;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.genetic-material {
+    position: relative;
+    width: 20%;
+    height: 10px;
+    border-top: 3px solid white;
+    margin-right: 30px;
+    margin-left: 120px;
+    margin-bottom: 7px;
+}
+
+.genetic-material::before {
+    content: '';
+    position: absolute;
+    right: 130px;
+    bottom: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #faf3dd;
+    display: block;
+    animation: col 3s ease infinite;
+}
+
+.genetic-material::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 130px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #28df99;
+    display: block;
+    animation: col 3s ease infinite;
+}
+
+.btns {
+    display: flex;
+    position: absolute;
+    top: 220px;
+    left: 500px;
+    flex-wrap: column;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+.startanimation {
+    padding: 10px;
+    margin-top: 80px;
+    margin-right: 100px;
+    background-color: tomato;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+}
+
+.startanimation:hover {
+    cursor: pointer;
+    border: none;
+}
+
+.stopanimation {
+    padding: 10px;
+    margin-top: 80px;
+    background-color: tomato;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.stopanimation:hover {
+    cursor: pointer;
+    border: none;
+}
+
+@keyframes coil {
+    10% {
+        border-top: 3px solid #fe7171;
+    }
+    20% {
+        border-top: 3px solid #28df99;
+    }
+    30% {
+        border-top: 3px solid #d2e603;
+    }
+    40% {
+        border-top: 3px solid #ffc93c;
+    }
+    50% {
+        border-top: 3px solid #f7f2e7;
+    }
+    60% {
+        border-top: 3px solid #efbbcf;
+    }
+    70% {
+        border-top: 3px solid #efbbcf;
+    }
+    80% {
+        border-top: 3px solid #ffb0b0;
+    }
+    90% {
+        border-top: 3px solid #eff48e;
+    }
+    100% {
+        transform: rotateY(360deg);
+        border-top: 3px solid #eff48e;
+    }
+}
